@@ -19,7 +19,7 @@ describe('TodoItemComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should addTodo', () => {
     expect(component).toBeTruthy();
   });
 });

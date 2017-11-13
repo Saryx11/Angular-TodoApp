@@ -6,11 +6,11 @@
 <div>
   <app-todo-form (todoCreated)="handleCreationofTodo($event)"></app-todo-form>
 </div>
-<div [ngSwitch]="listToDo.length">
+<div [ngSwitch]="service.listToDo.length">
   <p *ngSwitchCase="0">Vous n'avez pas de tâches en attente</p>
 
   <ul *ngSwitchDefault>
-    <li *ngFor="let toDo of listToDo">
+    <li *ngFor="let toDo of service.listToDo">
       <app-todo-item [toDo]="toDo" (todoModify)="changeTheTodo($event)"></app-todo-item>
     </li>
   </ul>
