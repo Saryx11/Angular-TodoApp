@@ -1,0 +1,21 @@
+<div>
+  <img src="http://simpleicon.com/wp-content/uploads/trash.svg" alt="" class="logoTrash" (click)="cleanList()">
+  <img src="../../assets/broom.svg" alt="brush" id="brush" (click)="ridOfTheDone()">
+</div>
+
+<div>
+  <app-todo-form (todoCreated)="handleCreationofTodo($event)"></app-todo-form>
+</div>
+<div [ngSwitch]="listToDo.length">
+  <p *ngSwitchCase="0">Vous n'avez pas de tâches en attente</p>
+
+  <ul *ngSwitchDefault>
+    <li *ngFor="let toDo of listToDo">
+      <app-todo-item [toDo]="toDo" (todoModify)="changeTheTodo($event)"></app-todo-item>
+    </li>
+  </ul>
+</div>
+
+
+
+

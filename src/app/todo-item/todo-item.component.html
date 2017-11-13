@@ -1,0 +1,4 @@
+<div class="listItem">
+  <label [ngClass]="{'textBarre': toDo.isDone}">{{toDo.title | uppercase }}</label>
+  <input type="checkbox" id="checkBox" [checked]="toDo.isDone" (click)="toggleCheck(toDo)">
+</div>

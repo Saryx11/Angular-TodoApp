@@ -1,0 +1,14 @@
+*{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#nameTodo{
+  height:30px;
+  font-size: 1em;
+  width:40%;
+}
+button{
+  height:35px;
+  width:5%;
+  font-size:1em;
+}
